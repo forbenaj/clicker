@@ -89,7 +89,7 @@ let current_scale = 1;
 
 function createNewPowerUp() {
     let random_value = Math.floor(Math.random() * 10)*current_scale;
-    let random_interval = Math.floor(Math.random() * 60);
+    let random_interval = Math.floor(Math.random() * 60) + 1;
     let newPowerUp = new PowerUp(random_value, random_interval);
     let powerUpElement = newPowerUp.create();
     if (score < newPowerUp.value) {
