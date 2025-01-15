@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click!</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mainContainer {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        #clicker {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #button {
+            display: flex;
+            font-size: 50px;
+            font-family: monospace;
+            border: 1px solid white;
+            padding: 10px;
+            margin: 50px;
+            cursor: pointer;
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        #button:hover {
+            background-color: white;
+            color: black;
+        }
+        #button:active {
+            background-color: blue;
+            color: black;
+        }
+        #score {
+            font-size: 50px;
+            margin: 50px;
+        }
+        #power-ups {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .power-up {
+            display: flex;
+            font-size: 20px;
+            font-family: monospace;
+            background-color: rgb(105, 200, 100);
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .power-up:hover {
+            background-color: white;
+            color: black;
+        }
+        .power-up:active {
+            background-color: blue;
+            color: black;
+        }
+        .disabled {
+            background-color: rgb(105, 105, 141);
+        }
+        .value {
+            font-size: 20px;
+            color: yellow;
+            font-family: monospace;
+        }
+        .prize {
+            font-size: 15px;
+            color: #22ff0f;
+            font-family: monospace;
+        }
+        .disabled .value {
+            color: rgb(192, 192, 192);
+        }
+    </style>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="clicker">
+            <div id="score">0</div>
+            <div id="button">Click!</div>
+        </div>
+        <div id="power-ups"></div>
+        <audio src="Recording.mp3"></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
